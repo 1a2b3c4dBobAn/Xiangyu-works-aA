@@ -1,0 +1,18 @@
+Object.eval_class do
+
+  def attr_accessor_lite(*args)
+    eval do
+      args.each do |arg| <<-MAGIC_STRING
+          def  #{arg}
+            @#{arg}
+          end
+
+          def #{arg} = (new_value)
+            @#{arg} = new_value
+          end
+        MAGIC_STRING
+      end
+    end
+  end
+
+end
