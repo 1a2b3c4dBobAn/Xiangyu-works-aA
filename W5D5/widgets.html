@@ -1,0 +1,135 @@
+<html>
+<body>
+<canvas width="800" height="600" id="canvas"></canvas>
+<script>
+var canvas = document.getElementById('canvas');
+
+var backg = canvas.getContext('2d');
+
+var grad = backg.createLinearGradient(0,0,600,600);
+// grad.addColorStop(0, "yellow");
+grad.addColorStop(0.25, "white");
+grad.addColorStop(0.75, "white");
+grad.addColorStop(1, "pink");
+
+backg.fillStyle = grad;
+backg.fillRect(0,0,580,600);
+
+var csha = canvas.getContext('2d');
+csha.fillStyle = 'black';
+csha.fillRect(105,105,405,405);
+
+var c = canvas.getContext('2d');
+c.fillStyle = "pink";
+c.fillRect(100,100,400,400);
+
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = "pink";
+ctx.fillRect(20,20,20,20);
+
+var ctxsha = canvas.getContext('2d');
+
+
+var dsha =canvas.getContext('2d');
+dsha.fillStyle = 'black';
+dsha.fillRect(70,70,80,80);
+
+var d = canvas.getContext('2d');
+var grad = d.createLinearGradient(60,60,140,140);
+grad.addColorStop(0,'pink');
+grad.addColorStop(0.5,'white');
+d.fillStyle = grad;
+d.fillRect(60,60,80,80);
+
+var tri1 = canvas.getContext('2d');
+tri1.fillStyle = 'black';
+tri1.transpa
+tri1.beginPath();
+tri1.moveTo(110,110);
+tri1.lineTo(110,210);
+tri1.lineTo(130,110);
+tri1.closePath();
+tri1.fill();
+
+var tri = canvas.getContext('2d');
+tri.fillStyle = 'white';
+tri.beginPath();
+tri.moveTo(100,100);
+tri.lineTo(100,200);
+tri.lineTo(120,100);
+tri.closePath();
+tri.fill();
+tri.strokeStyle = 'white';
+tri.lineWidth = 0.1;
+tri.stroke();
+
+
+
+
+var bezier1 = canvas.getContext('2d');
+
+var grad = bezier1.createLinearGradient(0,0,600,600);
+grad.addColorStop(0.25, "white");
+grad.addColorStop(0.5, "white");
+grad.addColorStop(1, "pink");
+
+bezier1.fillStyle = grad;
+bezier1.beginPath();
+bezier1.moveTo(60,350);
+bezier1.bezierCurveTo(250,450,400,100,650,350);
+bezier1.lineTo(650, 400);
+bezier1.lineTo(60,400);
+bezier1.closePath();
+bezier1.fill();
+bezier1.strokeStyle = 'white';
+bezier1.lineWidth = 5;
+bezier1.stroke();
+
+var bezier2 = canvas.getContext('2d');
+bezier2.beginPath();
+bezier2.moveTo(60,350);
+bezier2.bezierCurveTo(250,450,400,50,650,350);
+bezier2.lineTo(650,400);
+bezier2.lineTo(60,400);
+bezier2.closePath();
+bezier2.strokeStyle = 'white';
+bezier2.lineWidth = 4;
+bezier2.stroke();
+
+
+var bezier3 = canvas.getContext('2d');
+bezier3.beginPath();
+bezier3.moveTo(60,350);
+bezier3.bezierCurveTo(250,450,400,0,650,350);
+bezier3.lineTo(650,400);
+bezier3.lineTo(60,400);
+bezier3.closePath();
+bezier3.strokeStyle = 'white';
+bezier3.lineWidth = 3;
+bezier3.stroke();
+
+
+var bezier4 = canvas.getContext('2d');
+bezier4.beginPath();
+bezier4.moveTo(60,350);
+bezier4.bezierCurveTo(250,450,400,-50,650,350);
+bezier4.lineTo(650,400);
+bezier4.lineTo(60,400);
+bezier4.closePath();
+bezier4.strokeStyle = 'white';
+bezier4.lineWidth = 2;
+bezier4.stroke();
+
+var fin = canvas.getContext('2d');
+fin.font = "italic "+96+"pt Arial ";
+fin.fillStyle = "black";
+fin.fillText('fin.',195,567);
+
+var findup = canvas.getContext('2d');
+findup.font = 'italic'+96+'pt Arial';
+findup.fillStyle = "black";
+findup.fillText('the',70,567);
+
+</script>
+</body>
+</html>
